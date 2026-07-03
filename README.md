@@ -1,125 +1,89 @@
-# Apple Connect
+# Fact
 
-Apple Connect is a CLI-first toolkit for App Store Connect API workflows. The first workflow focuses on batch-managing localized App Store copy across multiple locales.
+Fact is a native macOS app for preparing App Store Connect release work. The
+old Node.js metadata CLI has been retired; the active product now lives in
+`macos/AppleConnectApp`.
 
-## What It Can Grow Into
+The current app is built for release-prep workflows that need a safe local
+workspace before anything is written back to App Store Connect. It includes a
+Demo workspace with mock apps and Demo AI fixtures, so the product can be
+reviewed without real App Store Connect credentials or model-provider keys.
 
-- Batch create and update App Store product-page copy for many locales.
-- Pull current App Store metadata into reviewable JSON/YAML files.
-- Create new App Store versions and attach builds.
-- Manage screenshots, previews, pricing, availability, reviews, and release settings.
-- Later, wrap the same core workflows in a macOS desktop app.
+## Current Scope
 
-## Setup
+- Localized App Store metadata editing and validation.
+- Screenshot and preview-video readiness by locale and device family.
+- Pricing, availability, app privacy, submission setup, ratings, and compliance
+  readiness checks.
+- Review Prep with blocker/warning summaries, checklist items, proposed fixes,
+  reports, and handoff export.
+- Live App Store Connect API skeleton for app/version/localization pull and
+  localized metadata create/update paths.
+- AI-assisted copy actions and cross-locale translation through an
+  OpenAI-compatible provider.
+- Keychain-backed storage for App Store Connect private keys and model-provider
+  API keys.
+- Local draft autosave and restore for metadata work in progress.
 
-Requires Node.js 20 or newer.
+See `macos/AppleConnectApp/PROJECT_STATUS.md` for the detailed implementation
+status, deliberate gaps, and next steps.
+
+## Repository Layout
+
+```text
+macos/AppleConnectApp/
+  Sources/AppleConnectApp/App/        App entry, state model, constants, and window setup
+  Sources/AppleConnectApp/Models/     Release-prep domain models
+  Sources/AppleConnectApp/Services/   App Store Connect, Keychain, draft, validation, and AI services
+  Sources/AppleConnectApp/Views/      SwiftUI workspaces and shared UI
+  Sources/AppleConnectApp/Resources/  App icon and localized strings
+  Tests/AppleConnectAppTests/         Swift tests for validation and release-prep logic
+```
+
+The Swift package remains available for command-line build and test loops, and
+`Fact.xcodeproj` is included for Xcode development.
+
+## Build And Test
 
 ```bash
-npm install
-cp .env.example .env
+cd macos/AppleConnectApp
+swift test
+xcodebuild -project Fact.xcodeproj -scheme Fact -configuration Debug CODE_SIGNING_ALLOWED=NO build
 ```
 
-Fill `.env` with your App Store Connect API credentials:
+Open the app project in Xcode:
 
 ```bash
-ASC_KEY_ID=YOUR_KEY_ID
-ASC_ISSUER_ID=YOUR_ISSUER_ID
-ASC_PRIVATE_KEY_PATH=/absolute/path/to/AuthKey_YOUR_KEY_ID.p8
+cd macos/AppleConnectApp
+scripts/open_xcode.sh
 ```
 
-The `.env` file and `.p8` keys are ignored by git.
-
-## Basic Commands
-
-Check credentials:
+Create a local app bundle:
 
 ```bash
-npm exec apple-connect -- auth check
+cd macos/AppleConnectApp
+scripts/package_app.sh
+open Build/Fact.app
 ```
 
-List apps:
+Create release artifacts:
 
 ```bash
-npm exec apple-connect -- apps:list
-npm exec apple-connect -- apps:list --bundle-id com.example.app
+cd macos/AppleConnectApp
+scripts/package_release.sh
+scripts/package_dmg.sh
 ```
 
-List App Store versions:
+Release signing and notarization are controlled by environment variables:
+`DEVELOPER_ID_APPLICATION`, `APPLE_ID`, `APPLE_TEAM_ID`, and
+`APPLE_APP_SPECIFIC_PASSWORD`.
 
-```bash
-npm exec apple-connect -- versions:list --app-id 1234567890
-npm exec apple-connect -- versions:list --app-id 1234567890 --platform IOS --state PREPARE_FOR_SUBMISSION
-```
+## Credentials
 
-Create a multi-locale copy template:
+No real credentials are required for Demo mode. For Live API mode, users provide
+an App Store Connect key ID, issuer ID, and private key. Private key content and
+LLM provider API keys are stored in Keychain; non-secret provider settings are
+stored separately in user defaults.
 
-```bash
-npm exec apple-connect -- metadata template --locales en-US,zh-Hans,ja --out metadata/app-store-copy.yaml
-```
-
-Pull existing metadata:
-
-```bash
-npm exec apple-connect -- metadata pull --app-id 1234567890 --version-id 9876543210 --out metadata/app-store-copy.yaml
-```
-
-Validate locally:
-
-```bash
-npm exec apple-connect -- metadata validate --file metadata/app-store-copy.yaml
-```
-
-Preview API changes:
-
-```bash
-npm exec apple-connect -- metadata plan \
-  --app-id 1234567890 \
-  --version-id 9876543210 \
-  --file metadata/app-store-copy.yaml
-```
-
-Apply changes. This command is dry-run unless `--yes` is provided:
-
-```bash
-npm exec apple-connect -- metadata apply \
-  --app-id 1234567890 \
-  --version-id 9876543210 \
-  --file metadata/app-store-copy.yaml \
-  --yes
-```
-
-## Copy File Format
-
-```yaml
-localizations:
-  - locale: en-US
-    appInfo:
-      name: Example App
-      subtitle: Calm daily planning
-      privacyPolicyUrl: https://example.com/privacy
-    version:
-      description: |
-        Example App helps you plan your day with a calm, focused workflow.
-      keywords: planning,todo,calendar,notes
-      promotionalText: A calmer way to plan your next day.
-      supportUrl: https://example.com/support
-      marketingUrl: https://example.com
-      whatsNew: |
-        Improved onboarding and fixed small sync issues.
-```
-
-You can also use a locale-keyed JSON/YAML object:
-
-```yaml
-en-US:
-  name: Example App
-  description: Example App helps you plan your day.
-  keywords: planning,todo,calendar
-  supportUrl: https://example.com/support
-```
-
-## Notes
-
-- New App Store version localizations should have a matching App Info localization. The CLI can create that first when `appInfo.name` is provided.
-- App Store Connect controls which fields are editable based on the app/version state. If Apple rejects an update, the CLI prints the API error payload summary.
-- The CLI validates common metadata limits before making API calls: app name, subtitle, description, promotional text, keywords, and full URL fields.
+The repository ignores common local credential files such as `.env.*`,
+`AuthKey_*.p8`, certificate files, and provisioning profiles.

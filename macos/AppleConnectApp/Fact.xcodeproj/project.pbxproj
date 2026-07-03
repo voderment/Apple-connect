@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00100000000000000000000 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000000 /* AppConstants.swift */; };
+		B00200000000000000000000 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00200000000000000000000 /* AppModel.swift */; };
+		B00300000000000000000000 /* AppleConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00300000000000000000000 /* AppleConnectApp.swift */; };
+		B00400000000000000000000 /* WindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00400000000000000000000 /* WindowConfigurator.swift */; };
+		B004A0000000000000000000 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A0000000000000000000 /* AppLanguage.swift */; };
+		B00500000000000000000000 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00500000000000000000000 /* AppTheme.swift */; };
+		B00600000000000000000000 /* ConnectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00600000000000000000000 /* ConnectModels.swift */; };
+		B00700000000000000000000 /* LLMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00700000000000000000000 /* LLMModels.swift */; };
+		B00800000000000000000000 /* MetadataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00800000000000000000000 /* MetadataModels.swift */; };
+		B00900000000000000000000 /* ASCJWTTokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00900000000000000000000 /* ASCJWTTokenProvider.swift */; };
+		B01000000000000000000000 /* AppStoreConnectAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01000000000000000000000 /* AppStoreConnectAPIClient.swift */; };
+		B01100000000000000000000 /* AppStoreConnectAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01100000000000000000000 /* AppStoreConnectAPIModels.swift */; };
+		B01200000000000000000000 /* AppStoreConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01200000000000000000000 /* AppStoreConnectService.swift */; };
+		B01300000000000000000000 /* LLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01300000000000000000000 /* LLMService.swift */; };
+		B01400000000000000000000 /* LiveAppStoreConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01400000000000000000000 /* LiveAppStoreConnectService.swift */; };
+		B01500000000000000000000 /* MetadataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01500000000000000000000 /* MetadataValidator.swift */; };
+		B01600000000000000000000 /* MockAppStoreConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01600000000000000000000 /* MockAppStoreConnectService.swift */; };
+		B01700000000000000000000 /* SecretStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01700000000000000000000 /* SecretStore.swift */; };
+		B01800000000000000000000 /* APIBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01800000000000000000000 /* APIBindingView.swift */; };
+		B01900000000000000000000 /* AppDetailShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01900000000000000000000 /* AppDetailShellView.swift */; };
+		B02000000000000000000000 /* AppHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02000000000000000000000 /* AppHomeView.swift */; };
+		B02100000000000000000000 /* AppVersionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02100000000000000000000 /* AppVersionsView.swift */; };
+		B02200000000000000000000 /* ConnectionSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02200000000000000000000 /* ConnectionSetupView.swift */; };
+		B02300000000000000000000 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02300000000000000000000 /* DashboardView.swift */; };
+		B02400000000000000000000 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02400000000000000000000 /* InspectorView.swift */; };
+		B02500000000000000000000 /* LLMProviderSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02500000000000000000000 /* LLMProviderSettingsView.swift */; };
+		B02600000000000000000000 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02600000000000000000000 /* LoginView.swift */; };
+		B02700000000000000000000 /* MetadataEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02700000000000000000000 /* MetadataEditorView.swift */; };
+		B02800000000000000000000 /* MetadataWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02800000000000000000000 /* MetadataWorkspaceView.swift */; };
+		B02900000000000000000000 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02900000000000000000000 /* RootView.swift */; };
+		B03000000000000000000000 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03000000000000000000000 /* SettingsView.swift */; };
+		B03100000000000000000000 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03100000000000000000000 /* SidebarView.swift */; };
+		B03200000000000000000000 /* MetadataChangeSummaryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03200000000000000000000 /* MetadataChangeSummaryFormatter.swift */; };
+		B03300000000000000000000 /* MetadataDocumentExportFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03300000000000000000000 /* MetadataDocumentExportFormatter.swift */; };
+		B03400000000000000000000 /* MetadataDocumentFileTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03400000000000000000000 /* MetadataDocumentFileTransfer.swift */; };
+		B03500000000000000000000 /* MetadataDocumentImportFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03500000000000000000000 /* MetadataDocumentImportFormatter.swift */; };
+		B03600000000000000000000 /* MetadataDraftStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03600000000000000000000 /* MetadataDraftStore.swift */; };
+		B03700000000000000000000 /* MetadataKeywordNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03700000000000000000000 /* MetadataKeywordNormalizer.swift */; };
+		B03800000000000000000000 /* MetadataReviewChecklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03800000000000000000000 /* MetadataReviewChecklist.swift */; };
+		B03900000000000000000000 /* MetadataReviewFixPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03900000000000000000000 /* MetadataReviewFixPlanner.swift */; };
+		B04000000000000000000000 /* MetadataReviewHandoffPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04000000000000000000000 /* MetadataReviewHandoffPackage.swift */; };
+		B04100000000000000000000 /* MetadataReviewPrepAdvisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04100000000000000000000 /* MetadataReviewPrepAdvisor.swift */; };
+		B04200000000000000000000 /* MetadataReviewReportFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04200000000000000000000 /* MetadataReviewReportFormatter.swift */; };
+		B04300000000000000000000 /* OrbiterDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04300000000000000000000 /* OrbiterDesignSystem.swift */; };
+		B04400000000000000000000 /* ReviewPrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04400000000000000000000 /* ReviewPrepView.swift */; };
+		B04500000000000000000000 /* MediaAssetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04500000000000000000000 /* MediaAssetModels.swift */; };
+		B04600000000000000000000 /* StoreMediaAssetInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04600000000000000000000 /* StoreMediaAssetInspector.swift */; };
+		B04700000000000000000000 /* MediaAssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04700000000000000000000 /* MediaAssetsView.swift */; };
+		B04800000000000000000000 /* StoreMediaReviewReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04800000000000000000000 /* StoreMediaReviewReadiness.swift */; };
+		B04900000000000000000000 /* PricingAvailabilityModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04900000000000000000000 /* PricingAvailabilityModels.swift */; };
+		B05000000000000000000000 /* PricingAvailabilityReviewReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05000000000000000000000 /* PricingAvailabilityReviewReadiness.swift */; };
+		B05100000000000000000000 /* PricingAvailabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05100000000000000000000 /* PricingAvailabilityView.swift */; };
+		B05200000000000000000000 /* AppPrivacyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05200000000000000000000 /* AppPrivacyModels.swift */; };
+		B05300000000000000000000 /* AppPrivacyReviewReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05300000000000000000000 /* AppPrivacyReviewReadiness.swift */; };
+		B05400000000000000000000 /* AppPrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05400000000000000000000 /* AppPrivacyView.swift */; };
+		B05500000000000000000000 /* SubmissionSetupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05500000000000000000000 /* SubmissionSetupModels.swift */; };
+		B05600000000000000000000 /* SubmissionSetupReviewReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05600000000000000000000 /* SubmissionSetupReviewReadiness.swift */; };
+		B05700000000000000000000 /* SubmissionSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05700000000000000000000 /* SubmissionSetupView.swift */; };
+		B05800000000000000000000 /* RatingsComplianceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05800000000000000000000 /* RatingsComplianceModels.swift */; };
+		B05900000000000000000000 /* RatingsComplianceReviewReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05900000000000000000000 /* RatingsComplianceReviewReadiness.swift */; };
+		B06000000000000000000000 /* RatingsComplianceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06000000000000000000000 /* RatingsComplianceView.swift */; };
+		BR0090000000000000000000 /* fact.icon in Resources */ = {isa = PBXBuildFile; fileRef = 40BB5E2C2FDEECA4007DDB4B /* fact.icon */; };
+		BR0100000000000000000000 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FR0100000000000000000000 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40BB5E2C2FDEECA4007DDB4B /* fact.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = fact.icon; sourceTree = "<group>"; };
+		F00100000000000000000000 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F00200000000000000000000 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		F00300000000000000000000 /* AppleConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleConnectApp.swift; sourceTree = "<group>"; };
+		F00400000000000000000000 /* WindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowConfigurator.swift; sourceTree = "<group>"; };
+		F004A0000000000000000000 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		F00500000000000000000000 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		F00600000000000000000000 /* ConnectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectModels.swift; sourceTree = "<group>"; };
+		F00700000000000000000000 /* LLMModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMModels.swift; sourceTree = "<group>"; };
+		F00800000000000000000000 /* MetadataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataModels.swift; sourceTree = "<group>"; };
+		F00900000000000000000000 /* ASCJWTTokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCJWTTokenProvider.swift; sourceTree = "<group>"; };
+		F01000000000000000000000 /* AppStoreConnectAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreConnectAPIClient.swift; sourceTree = "<group>"; };
+		F01100000000000000000000 /* AppStoreConnectAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreConnectAPIModels.swift; sourceTree = "<group>"; };
+		F01200000000000000000000 /* AppStoreConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreConnectService.swift; sourceTree = "<group>"; };
+		F01300000000000000000000 /* LLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMService.swift; sourceTree = "<group>"; };
+		F01400000000000000000000 /* LiveAppStoreConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAppStoreConnectService.swift; sourceTree = "<group>"; };
+		F01500000000000000000000 /* MetadataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataValidator.swift; sourceTree = "<group>"; };
+		F01600000000000000000000 /* MockAppStoreConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppStoreConnectService.swift; sourceTree = "<group>"; };
+		F01700000000000000000000 /* SecretStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretStore.swift; sourceTree = "<group>"; };
+		F01800000000000000000000 /* APIBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBindingView.swift; sourceTree = "<group>"; };
+		F01900000000000000000000 /* AppDetailShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailShellView.swift; sourceTree = "<group>"; };
+		F02000000000000000000000 /* AppHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeView.swift; sourceTree = "<group>"; };
+		F02100000000000000000000 /* AppVersionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionsView.swift; sourceTree = "<group>"; };
+		F02200000000000000000000 /* ConnectionSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSetupView.swift; sourceTree = "<group>"; };
+		F02300000000000000000000 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F02400000000000000000000 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
+		F02500000000000000000000 /* LLMProviderSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMProviderSettingsView.swift; sourceTree = "<group>"; };
+		F02600000000000000000000 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F02700000000000000000000 /* MetadataEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataEditorView.swift; sourceTree = "<group>"; };
+		F02800000000000000000000 /* MetadataWorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataWorkspaceView.swift; sourceTree = "<group>"; };
+		F02900000000000000000000 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F03000000000000000000000 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F03100000000000000000000 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		F03200000000000000000000 /* MetadataChangeSummaryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataChangeSummaryFormatter.swift; sourceTree = "<group>"; };
+		F03300000000000000000000 /* MetadataDocumentExportFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDocumentExportFormatter.swift; sourceTree = "<group>"; };
+		F03400000000000000000000 /* MetadataDocumentFileTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDocumentFileTransfer.swift; sourceTree = "<group>"; };
+		F03500000000000000000000 /* MetadataDocumentImportFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDocumentImportFormatter.swift; sourceTree = "<group>"; };
+		F03600000000000000000000 /* MetadataDraftStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDraftStore.swift; sourceTree = "<group>"; };
+		F03700000000000000000000 /* MetadataKeywordNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataKeywordNormalizer.swift; sourceTree = "<group>"; };
+		F03800000000000000000000 /* MetadataReviewChecklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataReviewChecklist.swift; sourceTree = "<group>"; };
+		F03900000000000000000000 /* MetadataReviewFixPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataReviewFixPlanner.swift; sourceTree = "<group>"; };
+		F04000000000000000000000 /* MetadataReviewHandoffPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataReviewHandoffPackage.swift; sourceTree = "<group>"; };
+		F04100000000000000000000 /* MetadataReviewPrepAdvisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataReviewPrepAdvisor.swift; sourceTree = "<group>"; };
+		F04200000000000000000000 /* MetadataReviewReportFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataReviewReportFormatter.swift; sourceTree = "<group>"; };
+		F04300000000000000000000 /* OrbiterDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbiterDesignSystem.swift; sourceTree = "<group>"; };
+		F04400000000000000000000 /* ReviewPrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPrepView.swift; sourceTree = "<group>"; };
+		F04500000000000000000000 /* MediaAssetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAssetModels.swift; sourceTree = "<group>"; };
+		F04600000000000000000000 /* StoreMediaAssetInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMediaAssetInspector.swift; sourceTree = "<group>"; };
+		F04700000000000000000000 /* MediaAssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAssetsView.swift; sourceTree = "<group>"; };
+		F04800000000000000000000 /* StoreMediaReviewReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMediaReviewReadiness.swift; sourceTree = "<group>"; };
+		F04900000000000000000000 /* PricingAvailabilityModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingAvailabilityModels.swift; sourceTree = "<group>"; };
+		F05000000000000000000000 /* PricingAvailabilityReviewReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingAvailabilityReviewReadiness.swift; sourceTree = "<group>"; };
+		F05100000000000000000000 /* PricingAvailabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingAvailabilityView.swift; sourceTree = "<group>"; };
+		F05200000000000000000000 /* AppPrivacyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrivacyModels.swift; sourceTree = "<group>"; };
+		F05300000000000000000000 /* AppPrivacyReviewReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrivacyReviewReadiness.swift; sourceTree = "<group>"; };
+		F05400000000000000000000 /* AppPrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrivacyView.swift; sourceTree = "<group>"; };
+		F05500000000000000000000 /* SubmissionSetupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionSetupModels.swift; sourceTree = "<group>"; };
+		F05600000000000000000000 /* SubmissionSetupReviewReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionSetupReviewReadiness.swift; sourceTree = "<group>"; };
+		F05700000000000000000000 /* SubmissionSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionSetupView.swift; sourceTree = "<group>"; };
+		F05800000000000000000000 /* RatingsComplianceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsComplianceModels.swift; sourceTree = "<group>"; };
+		F05900000000000000000000 /* RatingsComplianceReviewReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsComplianceReviewReadiness.swift; sourceTree = "<group>"; };
+		F06000000000000000000000 /* RatingsComplianceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsComplianceView.swift; sourceTree = "<group>"; };
+		FC0100000000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC0200000000000000000000 /* Fact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fact.entitlements; sourceTree = "<group>"; };
+		FR0200000000000000000000 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FR0300000000000000000000 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		PROD01000000000000000000 /* Fact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		P00200000000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G00000000000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				G00800000000000000000000 /* Config */,
+				G00200000000000000000000 /* Sources/AppleConnectApp */,
+				G00100000000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G00100000000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PROD01000000000000000000 /* Fact.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G00200000000000000000000 /* Sources/AppleConnectApp */ = {
+			isa = PBXGroup;
+			children = (
+				G00300000000000000000000 /* App */,
+				G00400000000000000000000 /* Models */,
+				G00500000000000000000000 /* Services */,
+				G00600000000000000000000 /* Views */,
+				G00700000000000000000000 /* Resources */,
+			);
+			path = Sources/AppleConnectApp;
+			sourceTree = "<group>";
+		};
+		G00300000000000000000000 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000000 /* AppConstants.swift */,
+				F00200000000000000000000 /* AppModel.swift */,
+				F00300000000000000000000 /* AppleConnectApp.swift */,
+				F00400000000000000000000 /* WindowConfigurator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G00400000000000000000000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F004A0000000000000000000 /* AppLanguage.swift */,
+				F00500000000000000000000 /* AppTheme.swift */,
+				F05200000000000000000000 /* AppPrivacyModels.swift */,
+				F00600000000000000000000 /* ConnectModels.swift */,
+				F00700000000000000000000 /* LLMModels.swift */,
+				F04500000000000000000000 /* MediaAssetModels.swift */,
+				F00800000000000000000000 /* MetadataModels.swift */,
+				F04900000000000000000000 /* PricingAvailabilityModels.swift */,
+				F05800000000000000000000 /* RatingsComplianceModels.swift */,
+				F05500000000000000000000 /* SubmissionSetupModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G00500000000000000000000 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F00900000000000000000000 /* ASCJWTTokenProvider.swift */,
+				F01000000000000000000000 /* AppStoreConnectAPIClient.swift */,
+				F01100000000000000000000 /* AppStoreConnectAPIModels.swift */,
+				F01200000000000000000000 /* AppStoreConnectService.swift */,
+				F01300000000000000000000 /* LLMService.swift */,
+				F01400000000000000000000 /* LiveAppStoreConnectService.swift */,
+				F03200000000000000000000 /* MetadataChangeSummaryFormatter.swift */,
+				F03300000000000000000000 /* MetadataDocumentExportFormatter.swift */,
+				F03400000000000000000000 /* MetadataDocumentFileTransfer.swift */,
+				F03500000000000000000000 /* MetadataDocumentImportFormatter.swift */,
+				F03600000000000000000000 /* MetadataDraftStore.swift */,
+				F03700000000000000000000 /* MetadataKeywordNormalizer.swift */,
+				F03800000000000000000000 /* MetadataReviewChecklist.swift */,
+				F03900000000000000000000 /* MetadataReviewFixPlanner.swift */,
+				F04000000000000000000000 /* MetadataReviewHandoffPackage.swift */,
+				F04100000000000000000000 /* MetadataReviewPrepAdvisor.swift */,
+				F04200000000000000000000 /* MetadataReviewReportFormatter.swift */,
+				F01500000000000000000000 /* MetadataValidator.swift */,
+				F01600000000000000000000 /* MockAppStoreConnectService.swift */,
+				F05300000000000000000000 /* AppPrivacyReviewReadiness.swift */,
+				F05000000000000000000000 /* PricingAvailabilityReviewReadiness.swift */,
+				F05900000000000000000000 /* RatingsComplianceReviewReadiness.swift */,
+				F01700000000000000000000 /* SecretStore.swift */,
+				F05600000000000000000000 /* SubmissionSetupReviewReadiness.swift */,
+				F04600000000000000000000 /* StoreMediaAssetInspector.swift */,
+				F04800000000000000000000 /* StoreMediaReviewReadiness.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G00600000000000000000000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F01800000000000000000000 /* APIBindingView.swift */,
+				F01900000000000000000000 /* AppDetailShellView.swift */,
+				F02000000000000000000000 /* AppHomeView.swift */,
+				F05400000000000000000000 /* AppPrivacyView.swift */,
+				F02100000000000000000000 /* AppVersionsView.swift */,
+				F02200000000000000000000 /* ConnectionSetupView.swift */,
+				F02300000000000000000000 /* DashboardView.swift */,
+				F02400000000000000000000 /* InspectorView.swift */,
+				F02500000000000000000000 /* LLMProviderSettingsView.swift */,
+				F02600000000000000000000 /* LoginView.swift */,
+				F04700000000000000000000 /* MediaAssetsView.swift */,
+				F02700000000000000000000 /* MetadataEditorView.swift */,
+				F02800000000000000000000 /* MetadataWorkspaceView.swift */,
+				F04300000000000000000000 /* OrbiterDesignSystem.swift */,
+				F05100000000000000000000 /* PricingAvailabilityView.swift */,
+				F06000000000000000000000 /* RatingsComplianceView.swift */,
+				F04400000000000000000000 /* ReviewPrepView.swift */,
+				F02900000000000000000000 /* RootView.swift */,
+				F03000000000000000000000 /* SettingsView.swift */,
+				F03100000000000000000000 /* SidebarView.swift */,
+				F05700000000000000000000 /* SubmissionSetupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G00700000000000000000000 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FR0100000000000000000000 /* Localizable.strings */,
+				40BB5E2C2FDEECA4007DDB4B /* fact.icon */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		G00800000000000000000000 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FC0100000000000000000000 /* Info.plist */,
+				FC0200000000000000000000 /* Fact.entitlements */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T00100000000000000000000 /* Fact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CLAPP0000000000000000000 /* Build configuration list for PBXNativeTarget "Fact" */;
+			buildPhases = (
+				P00100000000000000000000 /* Sources */,
+				P00200000000000000000000 /* Frameworks */,
+				P00300000000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fact;
+			productName = Fact;
+			productReference = PROD01000000000000000000 /* Fact.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P00000000000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					T00100000000000000000000 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = CLPRJ0000000000000000000 /* Build configuration list for PBXProject "Fact" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+				Base,
+			);
+			mainGroup = G00000000000000000000000;
+			productRefGroup = G00100000000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T00100000000000000000000 /* Fact */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		P00300000000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BR0090000000000000000000 /* fact.icon in Resources */,
+				BR0100000000000000000000 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		P00100000000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00100000000000000000000 /* AppConstants.swift in Sources */,
+				B00200000000000000000000 /* AppModel.swift in Sources */,
+				B00300000000000000000000 /* AppleConnectApp.swift in Sources */,
+				B00400000000000000000000 /* WindowConfigurator.swift in Sources */,
+				B004A0000000000000000000 /* AppLanguage.swift in Sources */,
+				B00500000000000000000000 /* AppTheme.swift in Sources */,
+				B05200000000000000000000 /* AppPrivacyModels.swift in Sources */,
+				B00600000000000000000000 /* ConnectModels.swift in Sources */,
+				B00700000000000000000000 /* LLMModels.swift in Sources */,
+				B04500000000000000000000 /* MediaAssetModels.swift in Sources */,
+				B00800000000000000000000 /* MetadataModels.swift in Sources */,
+				B04900000000000000000000 /* PricingAvailabilityModels.swift in Sources */,
+				B05800000000000000000000 /* RatingsComplianceModels.swift in Sources */,
+				B05500000000000000000000 /* SubmissionSetupModels.swift in Sources */,
+				B00900000000000000000000 /* ASCJWTTokenProvider.swift in Sources */,
+				B01000000000000000000000 /* AppStoreConnectAPIClient.swift in Sources */,
+				B01100000000000000000000 /* AppStoreConnectAPIModels.swift in Sources */,
+				B01200000000000000000000 /* AppStoreConnectService.swift in Sources */,
+				B01300000000000000000000 /* LLMService.swift in Sources */,
+				B01400000000000000000000 /* LiveAppStoreConnectService.swift in Sources */,
+				B03200000000000000000000 /* MetadataChangeSummaryFormatter.swift in Sources */,
+				B03300000000000000000000 /* MetadataDocumentExportFormatter.swift in Sources */,
+				B03400000000000000000000 /* MetadataDocumentFileTransfer.swift in Sources */,
+				B03500000000000000000000 /* MetadataDocumentImportFormatter.swift in Sources */,
+				B03600000000000000000000 /* MetadataDraftStore.swift in Sources */,
+				B03700000000000000000000 /* MetadataKeywordNormalizer.swift in Sources */,
+				B03800000000000000000000 /* MetadataReviewChecklist.swift in Sources */,
+				B03900000000000000000000 /* MetadataReviewFixPlanner.swift in Sources */,
+				B04000000000000000000000 /* MetadataReviewHandoffPackage.swift in Sources */,
+				B04100000000000000000000 /* MetadataReviewPrepAdvisor.swift in Sources */,
+				B04200000000000000000000 /* MetadataReviewReportFormatter.swift in Sources */,
+				B01500000000000000000000 /* MetadataValidator.swift in Sources */,
+				B01600000000000000000000 /* MockAppStoreConnectService.swift in Sources */,
+				B05300000000000000000000 /* AppPrivacyReviewReadiness.swift in Sources */,
+				B05000000000000000000000 /* PricingAvailabilityReviewReadiness.swift in Sources */,
+				B05900000000000000000000 /* RatingsComplianceReviewReadiness.swift in Sources */,
+				B01700000000000000000000 /* SecretStore.swift in Sources */,
+				B05600000000000000000000 /* SubmissionSetupReviewReadiness.swift in Sources */,
+				B04600000000000000000000 /* StoreMediaAssetInspector.swift in Sources */,
+				B04800000000000000000000 /* StoreMediaReviewReadiness.swift in Sources */,
+				B01800000000000000000000 /* APIBindingView.swift in Sources */,
+				B01900000000000000000000 /* AppDetailShellView.swift in Sources */,
+				B02000000000000000000000 /* AppHomeView.swift in Sources */,
+				B05400000000000000000000 /* AppPrivacyView.swift in Sources */,
+				B02100000000000000000000 /* AppVersionsView.swift in Sources */,
+				B02200000000000000000000 /* ConnectionSetupView.swift in Sources */,
+				B02300000000000000000000 /* DashboardView.swift in Sources */,
+				B02400000000000000000000 /* InspectorView.swift in Sources */,
+				B02500000000000000000000 /* LLMProviderSettingsView.swift in Sources */,
+				B02600000000000000000000 /* LoginView.swift in Sources */,
+				B04700000000000000000000 /* MediaAssetsView.swift in Sources */,
+				B02700000000000000000000 /* MetadataEditorView.swift in Sources */,
+				B02800000000000000000000 /* MetadataWorkspaceView.swift in Sources */,
+				B04300000000000000000000 /* OrbiterDesignSystem.swift in Sources */,
+				B05100000000000000000000 /* PricingAvailabilityView.swift in Sources */,
+				B06000000000000000000000 /* RatingsComplianceView.swift in Sources */,
+				B04400000000000000000000 /* ReviewPrepView.swift in Sources */,
+				B02900000000000000000000 /* RootView.swift in Sources */,
+				B03000000000000000000000 /* SettingsView.swift in Sources */,
+				B03100000000000000000000 /* SidebarView.swift in Sources */,
+				B05700000000000000000000 /* SubmissionSetupView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FR0100000000000000000000 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FR0200000000000000000000 /* en */,
+				FR0300000000000000000000 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAPPDBG000000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = fact;
+				CODE_SIGN_ENTITLEMENTS = Config/Fact.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Fact;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infinity.factory.mac;
+				PRODUCT_MODULE_NAME = AppleConnectApp;
+				PRODUCT_NAME = Fact;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		CAPPREL000000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = fact;
+				CODE_SIGN_ENTITLEMENTS = Config/Fact.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Fact;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infinity.factory.mac;
+				PRODUCT_MODULE_NAME = AppleConnectApp;
+				PRODUCT_NAME = Fact;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		CPRJDBG000000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CPRJREL000000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CLAPP0000000000000000000 /* Build configuration list for PBXNativeTarget "Fact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAPPDBG000000000000000000 /* Debug */,
+				CAPPREL000000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CLPRJ0000000000000000000 /* Build configuration list for PBXProject "Fact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CPRJDBG000000000000000000 /* Debug */,
+				CPRJREL000000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P00000000000000000000000 /* Project object */;
+}
