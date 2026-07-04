@@ -1,4 +1,6 @@
-# Fact
+<img width="1780" height="1112" alt="image" src="https://github.com/user-attachments/assets/8cc6395a-2e52-4f08-8a45-e3729905825e" />
+
+# Fact - Apple Connect tool
 
 Fact is a native macOS app for preparing App Store Connect release work. The
 old Node.js metadata CLI has been retired; the active product now lives in
